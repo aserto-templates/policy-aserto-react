@@ -6,17 +6,17 @@ default allowed = false
 default visible = false
 default enabled = false
 
-allowed {
+allowed if {
     some i
     data.roles[user_roles[i]].perms["asertodemo.GET.api.protected"].allowed
 }
 
-visible {
+visible if {
     some i
     data.roles[user_roles[i]].perms["asertodemo.GET.api.protected"].visible
 }
 
-enabled {
+enabled if {
     some i
     data.roles[user_roles[i]].perms["asertodemo.GET.api.protected"].enabled
 }
